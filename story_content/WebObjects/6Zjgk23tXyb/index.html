@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<style>
+.container{
+ /*width:1366px;
+ height:766px;*/
+ position:fixed;
+ width:1363px;
+ height:768px;
+ background-image:url(image/bg.jpg);
+ background-repeat:no-repeat;	
+ font-family:Arial, Helvetica, sans-serif;
+}
+
+#patchman{
+	position:absolute;
+	width:1363px;
+	height:768px;
+	background-color:#666;
+	z-index:0;
+	opacity:0;
+}
+
+
+.loginBar{
+ width:309px;
+ height:49px;
+ background-color:#808080;
+ margin-left:17px;
+ position:absolute;	
+ font-size:24px;
+ line-height:40px;
+ color:#FFF;
+ text-align:center;
+ top:300px;
+ left:150px;
+  
+}
+
+.loginBarBelow{
+ width:438px;
+ height:214px;
+ background-color:#c4c4c4;
+ position:absolute;	
+ top:340px;
+ left:102px;
+ z-index:1000;
+}
+
+.logintype{
+ width:365px;
+ height:41px;
+ 
+ margin-top:25px;
+ margin-left:35px;
+
+}
+
+.submitBtnC{
+ width:363px;
+ height:35px;
+ text-align:center;
+ line-height:35px;
+ color:#FFF;
+ background-color:#B2B2B2;
+ margin-top:10px;
+ margin-left:40px;
+}
+
+</style>
+
+
+<script>
+//var caps=player.GetVar("myName"); 
+var localName;
+var completedSlide=false;
+var windowload=false;
+//var player=GetPlayer();
+//var usrScorePoints=player.GetVar("myName"); 
+
+
+var player = window.parent.GetPlayer();		
+
+
+$(document).ready(function(e) {
+    //$("#patchman").css("cursor","pointer");
+	
+	
+	$(function() {
+    $('#txt1').on('keypress', function(e) {
+        if (e.which == 32)
+		  if((document.getElementById('txt1').value == ""))
+	      {
+            return false;
+		  }
+		  else
+		  {
+			return true;  
+		  }
+    });
+});
+	
+	$("#patchman").click(function(){
+    if((document.getElementById('txt1').value == "")||(document.getElementById('txt1').value == "Name"))
+	{
+		document.getElementById('txt1').value = "Name"  ;
+	}
+ // console.log();
+})
+});
+
+
+
+function SetDefault(){
+      
+	  //alert("God");
+	  if((document.getElementById('txt1').value == "")||(document.getElementById('txt1').value == "Name"))
+	  {
+		  
+		 document.getElementById("subB").style.backgroundColor = "#B2B2B2"; 
+		 document.getElementById("subB").disabled = true;
+		 document.getElementById("subB").style.cursor = "default";
+	  }
+	  else
+	  {
+	    document.getElementById("subB").style.backgroundColor = "#808080";
+		document.getElementById("subB").disabled = false;
+		document.getElementById("subB").style.cursor = "pointer";
+		
+		//logInPage
+	  }
+    }
+
+function saveName()
+{
+	if((document.getElementById('txt1').value == "")||(document.getElementById('txt1').value == "Name"))
+	{
+		
+	}
+	else
+	{
+	localName= document.getElementById('txt1').value;
+	completedSlide=true;
+	player.SetVar("myName",localName); 
+	player.SetVar("loginPage",completedSlide);
+	}
+	//player.SetVar("localName",caps);
+}
+
+function myFunction()
+{
+		if((document.getElementById('txt1').value == "")||(document.getElementById('txt1').value == "Name"))
+		{
+			 document.getElementById('txt1').value = "";
+		}
+		else
+		{
+		   //document.getElementById('txt1').value = "";
+		}
+	
+	
+	
+}
+
+
+
+
+</script>
+<title>Login Page</title>
+</head>
+
+<body class="container">
+<div class="loginBar">Expedition: Audit</div>
+<div class="loginBarBelow">
+<div style="margin-left:160px; margin-top:40px; color:#333;">Enter your name:</div>
+  <div class="logintype"><input maxlength="25" style="width:357px; height:38px; color:#333; font-size:15px; border:hidden; background-color:#f0f0f0; padding-left:5px; margin-left:5px; " id="txt1" type="text" value="Name"  onclick="myFunction();" onchange="SetDefault();" onpaste="this.onchange();" oninput="this.onchange();"/></div>
+  <div id="subB" class="submitBtnC" onclick="saveName();">Submit</div>
+</div>
+
+<div id="patchman"></div>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Marble Activity</title>
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body class="container" ondragenter="return false" ondragover="return false">
+<div id="closeBtn">X</div>
+   <div id="timeUpPop">
+      <div class="blacktimeUpPop"></div>
+      <div class="timeupimg"></div>  
+   </div>
+   
+   <div id="popIncorrectDetail">
+        <div class="blackpopIncorrectDetail"></div>
+        <div class="popupImgIncorrect">
+          <div class="instructP2"><b>Try again</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">Your response is incorrect</p></div>
+          <div class="instructP2"><p style="margin-top:60px;">Please try again!</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continue">Continue</div>
+        </div>
+    </div>
+    
+    <div id="popIncorrectConfirm">
+        <div class="blackpopIncorrectConfirm"></div>
+        <div class="popupImgIncorrectConfirm">
+          <div class="instructP2"><b>Incorrect</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">That response is incorrect!</p></div>
+          <div class="instructP2"><p style="margin-top:60px;">Click continue, and then click on each bowl to view the <br> correct answers.</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continueWrong">Continue</div>
+        </div>
+    </div>
+    
+    <div id="popCorrectDetail">
+        <div class="blackpopCorrectDetail"></div>
+        <div class="popupImgCorrect">
+          <div class="instructP2"><b>Correct</b></div>
+          <div class="instructP2"><p style="margin-top:35px;">That response is correct!</p></div>
+          <div class="buttonC" style="margin-left:450px; margin-top:170px;" id="continueCorrect">Continue</div>
+        </div>
+    </div>
+   
+
+    <div id="popDetail">
+        <div class="blackpopDetail"></div>
+        <div class="popupImg">
+          <div class="instruct"><b>Instructions:</b></div>
+          <div class="instruct"><p style="margin-top:25px;">&#9654; Map the relevant assertion(s) to the cash and bank balance risks.</p></div>
+          <div class="instruct"><p style="margin-top:50px;">&#9654; Assertions can be mapped to more than 1 risk. </p></div>
+          <div class="buttonC"  id="letsGo">Let's go</div>
+        </div>
+    </div>
+    
+     <div id="popDetailCompleted">
+        <div class="blackPatch"></div>
+        <div class="popupImgCompleted"></div>
+    </div>
+    
+    <div id="popExit">
+        <div class="blackpopDetail"></div>
+        <div class="popupImg">
+          <div class="instructExit"><b>Do you really want to quit this activity?</b></div>
+          <div style="margin-left:200px">
+             <div class="buttonExit"  id="yesExit">Yes</div>
+             <div class="buttonExit"  id="NoExit">No</div>
+          </div>
+        </div>
+    </div>
+    
+    
+    
+    <div id="instructionFirst">
+        <i>Drag the assertion(s) to the relevant cash and bank balance risks, and click <b>Submit</b>.</i>
+    </div>
+    
+    <div id="instructionLast">
+        <i>Click <b>Done</b> to confirm the completion of this activity.</i>
+    </div>
+    
+    
+    <div id="activityID">
+        <div class="contentArea">
+          <div class="headerP">
+              <div style="margin-left:350px;">
+                  <div class="textBall">Existence</div>
+                  <div>
+                     <div class="ballPicDummy" id="waterMark1" draggable="false"></div>
+                     <div class="ballPic" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                   <div class="stripPNG"></div>
+              </div>
+              
+              
+              <div style="margin-left:520px;">
+                  <div class="textBall" style="margin-left:-90px;">Completeness</div>
+                  <div>
+                     <div class="ballPicDummy2" id="waterMark2" draggable="false"></div>
+                     <div class="ballPic2" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic2" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                   <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:670px;">
+                  <div class="textBall">Rights & Obligations</div>
+                  <div>
+                     <div class="ballPicDummy3" id="waterMark3" draggable="false"></div>
+                     <div class="ballPic3" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic3" draggable="true" id="object9" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic3" draggable="true" id="object10" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic3" draggable="true" id="object11" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                   <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:820px;">
+                  <div class="textBall" style="padding-right:30px;" disabled>Valuation</div>
+                  <div>
+                     <div class="ballPicDummy5" id="waterMark4" draggable="false"></div>
+                     <div class="ballPic5" draggable="true" id="object12" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                   <div class="stripPNG"></div>
+              </div>
+              
+              <div style="margin-left:990px;">
+                  <div class="textBall" style="margin-left:-90px;" disabled>Presentation & Disclosure</div>
+                  <div>
+                     <div class="ballPicDummy4" id="waterMark5" draggable="false"></div>
+                     <div class="ballPic4" draggable="true" id="object13" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                     <div class="ballPic4" draggable="true" id="object14" ondragstart="drag_start(event)" ondragend="drag_end(event)"></div>
+                  </div>
+                  
+              </div>
+           </div>  
+           
+           
+           <div class="bodyArea">
+            <div style="margin-left:200px;">
+             <div class="bowlStand">
+                  <div class="circle" id="drop1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>A payment is made to a vendor for goods that were not received.</p></div>
+                          <div class="patchHit" id="patch1"><p>1. Existence <br> 2. Completeness  <br> 3. Rights & Obligations</p></div>
+                       </div>
+             </div>
+            </div> 
+            
+             <div style="margin-left:380px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>The trade payables subledger is incorrect due to an input error of the quantities received by the Receiving clerk in the warehouse.</p></div>
+                          <div class="patchHit" id="patch2" style="margin-top:-175px;"><p>1. Completeness <br> 2. Rights & Obligations  <br> 3. Valuation</p></div>
+                       </div>
+              </div>
+            </div>
+            
+            
+             <div style="margin-left:560px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>A trade payable is recorded for an asset that the Company does not legally own yet.</p></div>
+                          <div class="patchHit" id="patch3" style="margin-top:-144px;"><p>1. Existence <br> 2. Rights & Obligations   <br> 3. Presentation & 
+    Disclosure</p></div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            
+            <div style="margin-left:740px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>A payable is incorrectly recorded twice for the same purchase.</p></div>
+                       <div class="patchHit" id="patch4" style="margin-top:-128px;"><p>1. Existence</p></div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            
+             <div style="margin-left:920px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>Purchases and the corresponding payables are not properly authorized in accordance with Company policy.</p></div>
+                          <div class="patchHit" id="patch5" style="margin-top:-160px;"><p>1. Existence <br> 2. Rights & Obligations</p></div>
+                       </div>
+               </div>
+            </div>
+            
+            
+            <div style="margin-left:930px;">
+               <div class="bowlStand">
+                  <div class="circle" id="drop6" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"></div>
+                       <div class="labelText">
+                          <div class="aligntexts"><p>The payable for a purchase of an asset is recorded to the wrong liability account.</p></div>
+                          <div class="patchHit" id="patch6" style="margin-top:-144px;"><p>1. Presentation & Disclosure <br> 2. Completeness</p></div>
+                       </div>
+               </div>
+            </div>
+            
+      </div>
+        
+      
+        
+        
+        <div class="backPatch">
+            <div class="containerBottomT">
+              <div id="dummyLoader"></div>
+              <div id="LogoRotator" class="varySpeed"></div>
+            </div>
+            <div class="timeC runner_time" id="time">05:00</div>
+            <div class="vertical-line" style="height: 50px;"></div>
+            <div class="containerBottomHeading" style="margin-left:10px;">Suggested solution – Accounts Payable</div> 
+            <div class="containerBottom buttonCT"  id="resetB" style="margin-left:610px;">Reset</div>
+            <div class="containerBottom buttonCT"  id="submitB" style="margin-left:10px;">Submit</div>            
+            <div class="containerBottom buttonCT"  id="done-btn" style="margin-left:10px;">Done</div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/main.js"	></script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lesson 8: Pre-Payments - Activity 3: WCGWs and Controls Matching Game</title>
+<link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="container" id="inits" ondragenter="return false" ondragover="return false">
+<div class="instructionPopUp" id="introPop">
+   <div class="introAlert">
+         <div class="instruct2"><b>Instructions:</b></div>
+         <div class="timeC"><b>Time: 15 minutes</b></div>
+         <div class="instruct">&nbsp; &#9658; &nbsp; Map the control to the What Can Go Wrong (WCGW) that the control can mitigate.</div>
+         <div class="instruct">&nbsp; &#9658; &nbsp; A control can be mapped to more than 1 WCGW. </div>
+         <div class="instruct">&nbsp; &#9658; &nbsp; Drag the pebbles from each WCGW to the respective Control. When you are done, click Submit.</div>
+         <div class="buttonC" id="letsGo">Let's go</div>
+   </div>
+   <div class="bgTint"></div>
+</div>
+
+<div id="ExitFile" >
+     <div class="exitAlert">
+   <div class="instruct2"><b>Exit</b></div>
+   <div class="instruct2" style="margin-left:200px;margin-top:50px;">Do you really wants to quit this activity?</div>
+   <div style="margin-left:180px;">
+        <div class="buttonC2" id="YesExit" >Yes</div>
+        <div class="buttonC2" id="NoExit">No</div>
+    </div>
+</div>
+<div class="bgTint"></div>
+</div>
+
+
+<div id="tryAgainID">
+<div class="tryAgainAlert">
+   <div class="instruct2"><b>Try Again</b></div>
+   <div class="instruct2">One or more of your responses are incorrect. Please try again.</div>
+   <div class="buttonD" id="continueID">Continue</div>
+</div>
+<div class="bgTint"></div>
+</div>
+
+ <div id="instructionFirst">
+        <i>Drag ang drop each pebble to the boxes below to map the WCGW to the controls, and click <b>Submit.</b></i>
+    </div>
+    
+    <div id="instructionLast">
+        <i>Click <b>Close</b> on the right corner of the activity.</i>
+    </div>
+
+
+
+<div id="inCorrectID">
+<div class="tryAgainAlert">
+   <div class="instruct2"><b>Incorrect</b></div>
+   <div class="instruct2">One or more of your responses are incorrect. Please click Continue and click on each Control to view the correct WCGWs that are associated with them.</div>
+   <div class="buttonD" id="continueICID" style="margin-top:100px">Continue</div>
+</div>
+<div class="bgTint"></div>
+</div>
+
+<div id="CorrectID">
+<div class="tryAgainAlert">
+   <div class="instruct2"><b>Correct</b></div>
+   <div class="instruct2">That's Correct!</div>
+   <div class="buttonD" id="continueCID">Continue</div>
+</div>
+<div class="bgTint"></div>
+</div>
+
+<div id="timeUpID">
+<div class="timeupC"></div>
+<div class="bgTint"></div>
+</div>
+
+<div id="completedID">
+<div class="completedC"></div>
+<div class="bgTint"></div>
+</div>
+
+<div class="secondScreen" id="secondID">
+<div class="blackPatch">
+<div class="greyBG"></div>
+  <div class="loader">
+    
+    <div id="dummyLoader"></div>
+    <div id="LogoRotator" class="varySpeed"></div>
+  </div>
+  <div class="timerS"><span id="time" class="runner_time">15:00</span> </div>
+  
+  <div class="heading"><b>Lesson 8: Pre-Payments - Activity 3: WCGWs and Controls Matching Game</b></div>
+  <div id="closeBtn">X</div>
+</div>
+<div class="boxCobtainer">
+
+ <div class="band"><div class="textTilt" style="margin-top:-4px;">WCGW&nbsp;&&nbsp;Assertions</div></div>
+ <div class="rectBox" style="margin-left:140px;" >
+   <div class="textDec">Amortization is calculated and recorded in the wrong amount (incorrect useful lives, salvage value or methods/assumptions).</div>
+   <div class="mableimgCopy" id="waterMark1" draggable="false">1</div>
+   <div class="mableimg" draggable="true" id="object1" ondragstart="drag_start(event)" ondragend="drag_end(event)">1</div>
+   <div class="mableimg" draggable="true" id="object2" ondragstart="drag_start(event)" ondragend="drag_end(event)">1</div>
+   <div class="mableimg" draggable="true" id="object3" ondragstart="drag_start(event)" ondragend="drag_end(event)">1</div>
+   <div class="mableimg" draggable="true" id="object4" ondragstart="drag_start(event)" ondragend="drag_end(event)">1</div>
+ </div>
+ 
+ <div class="rectBox">
+ <div class="textDec">Amortization expense is not recorded on related assets</div>
+    <div class="mableimgCopy mableimg2" id="waterMark2" draggable="false">2</div>
+    <div class="mableimg mableimg2" draggable="true" id="object5" ondragstart="drag_start(event)" ondragend="drag_end(event)">2</div>
+    <div class="mableimg mableimg2" draggable="true" id="object6" ondragstart="drag_start(event)" ondragend="drag_end(event)">2</div>
+    <div class="mableimg mableimg2" draggable="true" id="object7" ondragstart="drag_start(event)" ondragend="drag_end(event)">2</div>
+ </div>
+ 
+  <div class="rectBox">
+   <div class="textDec">Prepaid insurance that expired during the year was not expensed.</div>
+   <div class="mableimgCopy mableimg33" id="waterMark3" draggable="false">3</div>
+   <div class="mableimg mableimg33" draggable="true" id="object8" ondragstart="drag_start(event)" ondragend="drag_end(event)">3</div>
+ </div>
+ 
+ <div class="rectBox" style="margin-left:300px;">
+   <div class="textDec">Extensions/totals in the amortization schedules are incorrect</div>
+    <div class="mableimgCopy mableimg44" id="waterMark4" draggable="false">4</div>
+    <div class="mableimg mableimg44" draggable="true" id="object9" ondragstart="drag_start(event)" ondragend="drag_end(event)">4</div>
+    <div class="mableimg mableimg44" draggable="true" id="object10" ondragstart="drag_start(event)" ondragend="drag_end(event)">4</div>
+    <div class="mableimg mableimg44" draggable="true" id="object11" ondragstart="drag_start(event)" ondragend="drag_end(event)">4</div>
+ </div>
+ 
+ <div class="rectBox">
+   <div class="textDec">Purchases of insurance are not recorded in the proper period.</div>
+    <div class="mableimgCopy mableimg5" id="waterMark5" draggable="false">5</div>
+    <div class="mableimg mableimg5" draggable="true" id="object12" ondragstart="drag_start(event)" ondragend="drag_end(event)">5</div>
+ </div>
+ 
+ 
+
+
+
+<div class="btnContainer">
+   <div class="submitBtn" id="submitB">Submit</div>
+   <div class="resetBtn" id="resetB">Reset</div>
+</div>
+
+
+<div>
+<div class="band"><div class="textTilt">Control</div></div>
+<div class="bottomBox" style="margin-left:100px;">
+       <div class="topBand">
+             <div class="stoneC" id="sT10"></div>
+             <div class="stoneC" id="sT11"></div>
+             <div class="stoneC" id="sT12"></div>
+             <div class="stoneC" id="sT13"></div>
+             <div class="stoneC" id="sT14"></div>
+             <div class="stoneC" id="sT15"></div>
+             <div class="stoneC" id="sT16"></div>
+             <div class="stoneC" id="sT17"></div>
+             <div class="stoneC" id="sT18"></div>
+             <div class="stoneC" id="sT19"></div>
+       </div>
+       <div style="margin-left:18px;">
+           <div class="answerBadge" id="cwA1"></div>
+           <div class="answerBadge" id="cwA2"></div>
+           <div class="answerBadge" id="cwA3"></div>
+           <div class="answerBadge" id="cwA4"></div>
+           <div class="answerBadge" id="cwA5"></div>
+           <div class="answerBadge" id="cwA6"></div>
+           <div class="answerBadge" id="cwA7"></div>
+           <div class="answerBadge" id="cwA8"></div>
+       </div>
+   <div class="showCorrectAns" id="showAns1">
+      <div class="circle" style="margin-left:50px;">1</div>
+      <div class="circle" style="margin-left:10px;">2</div>
+      <div class="circle" style="margin-left:10px;">4</div>
+   </div>
+   <div class="boxContent" id="drop_zone1" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"><div class="marginAll">On a monthly basis, the accounting manager reviews the prepayments amortization calculation and compares it to budget and prior periods.</div>
+  </div>
+  <div class="bottomBand">
+     <div class="alignBold">IT-Dependent Manual</div>
+  </div>
+  <div>
+    <div class="pstone1" id="HsT10"></div>
+    <div class="pstone2" id="HsT11"></div>
+    <div class="pstone3" id="HsT12"></div>
+    <div class="pstone4" id="HsT13"></div>
+    <div class="pstone5" id="HsT14"></div>
+    <div class="pstone6" id="HsT15"></div>
+    <div class="pstone7" id="HsT16"></div>
+    <div class="pstone8" id="HsT17"></div>
+  </div>
+</div>
+   
+   
+   
+<div class="bottomBox">
+           <div class="topBand">
+             <div class="stoneC" id="sT20"></div>
+             <div class="stoneC" id="sT21"></div>
+             <div class="stoneC" id="sT22"></div>
+             <div class="stoneC" id="sT23"></div>
+             <div class="stoneC" id="sT24"></div>
+             <div class="stoneC" id="sT25"></div>
+             <div class="stoneC" id="sT26"></div>
+             <div class="stoneC" id="sT27"></div>
+             <div class="stoneC" id="sT28"></div>
+             <div class="stoneC" id="sT29"></div>
+           </div>
+        <div style="margin-left:18px;">
+           <div class="answerBadge" id="cwB1"></div>
+           <div class="answerBadge" id="cwB2"></div>
+           <div class="answerBadge" id="cwB3"></div>
+           <div class="answerBadge" id="cwB4"></div>
+           <div class="answerBadge" id="cwB5"></div>
+           <div class="answerBadge" id="cwB6"></div>
+           <div class="answerBadge" id="cwB7"></div>
+           <div class="answerBadge" id="cwB8"></div>
+       </div>
+       <div class="showCorrectAns" id="showAns2">
+         <div class="circle" style="margin-left:70px;">1</div>
+         <div class="circle" style="margin-left:10px;">2</div>
+       </div>
+       <div class="boxContent" id="drop_zone2" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"><div class="marginAll">System automatically calculates monthly amortization expense.</div>
+      </div>
+      <div class="bottomBand">
+         <div class="alignBold">Application</div>
+      </div>
+      <div>
+        <div class="pstone1" id="HsT20"></div>
+        <div class="pstone2" id="HsT21"></div>
+        <div class="pstone3" id="HsT22"></div>
+        <div class="pstone4" id="HsT23"></div>
+        <div class="pstone5" id="HsT24"></div>
+        <div class="pstone6" id="HsT25"></div>
+        <div class="pstone7" id="HsT26"></div>
+        <div class="pstone8" id="HsT27"></div>
+      </div>
+</div>
+   
+   
+<div class="bottomBox">
+           <div class="topBand">
+                  <div class="stoneC" id="sT30"></div>
+                  <div class="stoneC" id="sT31"></div>
+                  <div class="stoneC" id="sT32"></div>
+                  <div class="stoneC" id="sT33"></div>
+                  <div class="stoneC" id="sT34"></div>
+                  <div class="stoneC" id="sT35"></div>
+                  <div class="stoneC" id="sT36"></div>
+                  <div class="stoneC" id="sT37"></div>
+                  <div class="stoneC" id="sT38"></div>
+                  <div class="stoneC" id="sT39"></div>
+           </div>
+         <div style="margin-left:18px;">
+           <div class="answerBadge" id="cwC1"></div>
+           <div class="answerBadge" id="cwC2"></div>
+           <div class="answerBadge" id="cwC3"></div>
+           <div class="answerBadge" id="cwC4"></div>
+           <div class="answerBadge" id="cwC5"></div>
+           <div class="answerBadge" id="cwC6"></div>
+           <div class="answerBadge" id="cwC7"></div>
+           <div class="answerBadge" id="cwC8"></div>
+       </div>
+       <div class="showCorrectAns" id="showAns3">
+         <div class="circle" style="margin-left:70px;">1</div>
+         <div class="circle" style="margin-left:10px;">4</div>
+       
+       </div>
+       <div class="boxContent" id="drop_zone3" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"><div class="marginAll">The Finance Director reviews new contracts, agreements and insurance policies for proper accounting.</div>
+      </div>
+      <div class="bottomBand">
+         <div class="alignBold">Manual Prevent</div>
+      </div>
+      <div>
+        <div class="pstone1" id="HsT30"></div>
+        <div class="pstone2" id="HsT31"></div>
+        <div class="pstone3" id="HsT32"></div>
+        <div class="pstone4" id="HsT33"></div>
+        <div class="pstone5" id="HsT34"></div>
+        <div class="pstone6" id="HsT35"></div>
+        <div class="pstone7" id="HsT36"></div>
+        <div class="pstone8" id="HsT37"></div>
+      </div>
+</div>
+
+
+<div class="bottomBox">
+           <div class="topBand">
+                  <div class="stoneC" id="sT40"></div>
+                  <div class="stoneC" id="sT41"></div>
+                  <div class="stoneC" id="sT42"></div>
+                  <div class="stoneC" id="sT43"></div>
+                  <div class="stoneC" id="sT44"></div>
+                  <div class="stoneC" id="sT45"></div>
+                  <div class="stoneC" id="sT46"></div>
+                  <div class="stoneC" id="sT47"></div>
+                  <div class="stoneC" id="sT48"></div>
+                  <div class="stoneC" id="sT49"></div>
+           </div>
+       <div style="margin-left:18px;">
+           <div class="answerBadge" id="cwD1"></div>
+           <div class="answerBadge" id="cwD2"></div>
+           <div class="answerBadge" id="cwD3"></div>
+           <div class="answerBadge" id="cwD4"></div>
+           <div class="answerBadge" id="cwD5"></div>
+           <div class="answerBadge" id="cwD6"></div>
+           <div class="answerBadge" id="cwD7"></div>
+           <div class="answerBadge" id="cwD8"></div>
+       </div>
+        <div class="showCorrectAns" id="showAns4">
+          <div class="circle" style="margin-left:90px;">5</div>
+  
+        </div>
+       <div class="boxContent" id="drop_zone4" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"><div class="marginAll">The accounting supervisor reviews subsequent supplier invoices for recording in the appropriate period.</div>
+      </div>
+      <div class="bottomBand">
+         <div class="alignBold">Manual Prevent</div>
+      </div>
+      <div>
+        <div class="pstone1" id="HsT40"></div>
+        <div class="pstone2" id="HsT41"></div>
+        <div class="pstone3" id="HsT42"></div>
+        <div class="pstone4" id="HsT43"></div>
+        <div class="pstone5" id="HsT44"></div>
+        <div class="pstone6" id="HsT45"></div>
+        <div class="pstone7" id="HsT46"></div>
+        <div class="pstone8" id="HsT47"></div>
+      </div>
+</div>
+
+
+<div class="bottomBox">
+           <div class="topBand">
+                  <div class="stoneC" id="sT50"></div>
+                  <div class="stoneC" id="sT51"></div>
+                  <div class="stoneC" id="sT52"></div>
+                  <div class="stoneC" id="sT53"></div>
+                  <div class="stoneC" id="sT54"></div>
+                  <div class="stoneC" id="sT55"></div>
+                  <div class="stoneC" id="sT56"></div>
+                  <div class="stoneC" id="sT57"></div>
+                  <div class="stoneC" id="sT58"></div>
+                  <div class="stoneC" id="sT59"></div>
+           </div>
+          <div style="margin-left:18px;">
+           <div class="answerBadge" id="cwE1"></div>
+           <div class="answerBadge" id="cwE2"></div>
+           <div class="answerBadge" id="cwE3"></div>
+           <div class="answerBadge" id="cwE4"></div>
+           <div class="answerBadge" id="cwE5"></div>
+           <div class="answerBadge" id="cwE6"></div>
+           <div class="answerBadge" id="cwE7"></div>
+           <div class="answerBadge" id="cwE8"></div>
+       </div>
+        <div class="showCorrectAns" id="showAns5">
+         <div class="circle" style="margin-left:40px;">1</div>
+         <div class="circle" style="margin-left:10px;">2</div>
+         <div class="circle" style="margin-left:10px;">3</div>
+         <div class="circle" style="margin-left:10px;">4</div>
+       </div>
+       <div class="boxContent" id="drop_zone5" ondragenter="drag_enter(event)" ondrop="drag_drop(event)" ondragover="return false" ondragleave="drag_leave(event)"><div class="marginAll">Supporting schedules are reconciled to the general ledger.</div>
+      </div>
+      <div class="bottomBand">
+         <div class="alignBold">Manual Prevent</div>
+      </div>
+      <div>
+        <div class="pstone1" id="HsT50"></div>
+        <div class="pstone2" id="HsT51"></div>
+        <div class="pstone3" id="HsT52"></div>
+        <div class="pstone4" id="HsT53"></div>
+        <div class="pstone5" id="HsT54"></div>
+        <div class="pstone6" id="HsT55"></div>
+        <div class="pstone7" id="HsT56"></div>
+        <div class="pstone8" id="HsT57"></div>
+      </div>
+</div>
+
+   
+   
+   
+
+</div>
+
+</div>
+</div>
+
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

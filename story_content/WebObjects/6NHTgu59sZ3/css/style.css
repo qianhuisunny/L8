@@ -1,0 +1,594 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container{
+ position:fixed;
+ max-width:1366px;
+ width:1366px;
+ height:555px;
+ background-image:url(../images/1200.jpg);
+ background-repeat:no-repeat;	
+ font-family:EYInterstate;
+ margin:0px auto;
+ 
+}
+
+.stripPNG{
+	width:2px;
+	height:45px;
+	position:absolute;
+	background-color:#7D3543;
+	margin-left:60px;
+	margin-top:0px;
+    border-radius: 4px; 
+}
+
+.contentArea{
+	 width:1366px;
+	 height:555px;
+	 background-image:url(../images/Layer%201.png);
+	 background-repeat:no-repeat;
+}
+
+.bodyArea{
+	width:1366px;
+	height:425px;
+
+}
+
+#timeUpPop{
+	 z-index:99;
+}
+
+#closeBtn{
+	width:30px;
+	height:28px;
+	background-color:#333;
+	font-size:18px;
+	color:#FFF;
+	text-align:center;
+	line-height:28px;
+	margin-left:1330px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+
+.blacktimeUpPop{
+	 position:absolute;
+	 width:1366px;
+     height:555px;
+	 position:absolute;
+	 background-color:#000;
+	 z-index:99;
+	 opacity:0.7;
+}
+
+.timeupimg{
+	position:absolute;
+	width:447px;
+	height:447px;
+	margin-left:450px;
+	margin-top:50px;
+	background-image:url(../images/timeup.png);
+	background-repeat:no-repeat;
+	z-index:99;
+}
+
+.popupImgIncorrect{
+	position:absolute;
+	width:584px;
+	height:220px;
+	margin-left:400px;
+	margin-top:180px;
+	background-image:url(../images/incorrect.png);
+	background-repeat:no-repeat;
+	z-index:100;
+}
+
+#popDetail{
+	z-index:100;
+}
+
+.blackpopDetail{ 
+     position:absolute;
+	 width:1366px;
+	 height:555px;
+	 background-color:#000;
+	 z-index:100;
+	 opacity:0.8;
+	
+}
+
+.blackPatch{
+	 position:absolute;
+	 width:1366px;
+	 height:555px;
+	 background-color:#000;
+	 z-index:100;
+	 opacity:0.7;
+	
+}
+
+#popIncorrectDetail{
+	z-index:100;
+}
+
+.blackpopIncorrectDetail{
+	
+	 position:absolute;
+	 width:1366px;
+	 height:555px;
+	 background-color:#000;
+	 opacity:0.7;
+	 z-index:100;
+}
+
+#popIncorrectConfirm{
+	  z-index:100;
+}
+
+.blackpopIncorrectConfirm{
+	 position:absolute;
+	 width:1366px;
+	 height:555px;
+	 background-color:#000;
+	 opacity:0.7;
+	 z-index:100;
+}
+
+.popupImgCorrect{
+	 position:absolute;
+	 width:584px;
+	 height:220px;
+	 margin-left:350px;
+	 margin-top:150px;
+	 background-image:url(../images/correct.png);
+	 background-repeat:no-repeat;
+	 z-index:100;
+	 
+}
+.popupImgIncorrectConfirm{
+	 position:absolute;
+	 width:1366px;
+	 height:555px;
+	 margin-left:350px;
+	 margin-top:150px;
+	 background-image:url(../images/incorrect.png);
+	 background-repeat:no-repeat;
+	 z-index:100;
+}
+
+.patchHit{
+	 position:absolute;
+	 width:278px;
+	 height:234px;
+	 font-size:13px;
+	 margin-left:-20px;
+	 margin-top:-159px;
+	 padding:10px;
+	 background-image:url(../images/patch.png);
+	 background-repeat:no-repeat;
+}
+
+
+#popCorrectDetail{
+	 z-index:100;
+}
+
+.blackpopCorrectDetail{
+	 position:absolute;
+	 width:1366px;
+	 height:555px;
+	 background-color:#000;
+	 z-index:100;
+	 opacity:0.7;
+}
+
+.popupImg{
+	position:absolute;
+	width:642px;
+	height:302px;
+	margin-left:350px;
+	margin-top:150px;
+	background-image:url(../images/bulb.png);
+	z-index:100;
+}
+
+
+#instructionLast{
+	width:400px;
+	height:60px;
+	text-align:right;
+	font-size:12px;
+	line-height:60px;
+	position:absolute;
+	color:#FFF;
+	margin-top:495px;
+	margin-left:960px;
+	z-index:100;
+	background-color:#000;
+}
+
+/*#instructionFirst{
+	
+	width:600px;
+	height:60px;
+	text-align:right;
+	font-size:12px;
+	line-height:60px;
+	position:absolute;
+	color:#FFF;
+	margin-top:495px;
+	margin-left:420px;
+	z-index:100;
+}*/
+
+div#done-btn {
+    background: #ffe600 !important;
+	cursor: pointer !important;
+}
+#instructionFirst {
+    width: auto;
+    height: 60px;
+    text-align: right;
+    font-size: 11px;
+    line-height: 60px;
+    position: absolute;
+    color: #FFF;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 100;
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+}
+div#resetB {
+    margin-left: 6% !important;
+}
+.popupImgCompleted{
+	position:absolute;
+	width:581px;
+	height:463px;
+	margin-left:430px;
+	margin-top:110px;
+	background-image:url(../images/completed.png);
+	background-repeat:no-repeat;
+	z-index:100;
+	
+}
+
+#popDetailCompleted{
+	z-index:100;
+}
+
+.instruct{
+	 position:absolute;
+	 margin-top:95px;
+	 margin-left:35px;
+	 font-size:15px;
+	 color:#FFF;
+	 font-family:EYInterstate;
+}
+
+.instructExit{
+	 position:absolute;
+	 margin-top:140px;
+	 margin-left:170px;
+	 font-size:15px;
+	 color:#FFF;
+	 font-family:EYInterstate;
+	
+}
+
+.instructP2{
+	 position:absolute;
+	 margin-top:20px;
+	 margin-left:35px;
+	 font-size:15px;
+	 color:#FFF;
+	 font-family:EYInterstate;
+}
+
+.buttonC{
+	width:120px;
+	height:40px;
+    position:absolute;
+	color:#FFF;
+	margin-top:250px;
+	margin-left:510px;
+	text-align:center;
+	font-size:15px;
+	line-height:40px;
+	border-style: solid;
+	border-width:thin;
+	border-color: #FFF;
+	cursor:pointer;
+	
+}
+
+.buttonExit{
+	width:100px;
+	height:40px;
+	float:left;
+	color:#FFF;
+	margin-left:5px;
+	margin-top:170px;
+	text-align:center;
+	font-size:15px;
+	line-height:40px;
+	border-style: solid;
+	border-width:thin;
+	border-color: #FFF;
+	cursor:pointer;
+	
+}
+
+.backPatch{
+	position:absolute;
+	margin-top:-60px;
+	max-width:1366px;
+    width:1366px;
+	height:60px;
+	background-color:#000;
+}
+
+.headerP{
+	width:1366px;
+	height:100px;
+	padding-top:30px;
+	margin-left:110px;
+	
+}
+
+.textBall{
+	float:left;
+	width:80px;
+	margin-top:12px;
+	color:#FFF;
+	font-size:12px;
+	margin-left:-82px;
+}
+
+.ballPic{
+	position:absolute;
+	width:44px;
+	height:43px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/red.png);
+	background-repeat:no-repeat;
+}
+
+.ballPicDummy{
+	position:absolute;
+	width:44px;
+	height:43px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/red.png);
+	background-repeat:no-repeat;
+	opacity:0.5;
+}
+
+.ballPic2{
+	position:absolute;
+	width:44px;
+	height:43px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/yellow.png);
+	background-repeat:no-repeat;
+}
+.ballPicDummy2{
+	position:absolute;
+	width:44px;
+	height:43px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/yellow.png);
+	background-repeat:no-repeat;
+	opacity:0.5;
+}
+
+.ballPic3{
+	position:absolute;
+	width:43px;
+	height:42px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/purple.png);
+	background-repeat:no-repeat;
+}
+.ballPicDummy3{
+	position:absolute;
+	width:43px;
+	height:42px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/purple.png);
+	background-repeat:no-repeat;
+	opacity:0.5;
+}
+
+
+.ballPic4{
+	position:absolute;
+	width:44px;
+	height:44px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/blue.png);
+	background-repeat:no-repeat;
+}
+.ballPicDummy4{
+	position:absolute;
+	width:44px;
+	height:44px;
+	/*margin-left:80px;*/
+	float:left;
+	background-image:url(../images/blue.png);
+	background-repeat:no-repeat;
+	opacity:0.5;
+}
+
+.bowlStand{
+	width:127px;
+	height:415px;
+	float:left;
+	margin-top:10px;
+	margin-left:50px;
+	background-image:url(../images/buck.png);
+	background-repeat:no-repeat;
+}
+
+.labelText{
+	width:178px;
+	height:208px;
+	margin-left:-25px;
+	margin-top:40px;
+	background-image:url(../images/Board.png);
+	background-repeat:no-repeat;
+	
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	margin-left:15px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	opacity:0;
+}
+
+.aligntexts{
+	font-size:13px;
+	padding:20px;
+	
+}
+
+.containerBottom{
+	width:120px;
+	height:60px;
+	float:left;
+	background-color:#666;
+	
+	
+}
+
+.containerBottomT{
+	width:50px;
+	height:60px;
+	float:left;
+	line-height:60px;
+	margin-top:7px;
+	margin-left:10px;
+	
+}
+
+#dummyLoader {
+	position:absolute;
+	width:50px; 
+	height:60px; 
+	margin-top:-7px;
+	background-image:url(../images/timeLoader.png);
+	background-repeat:no-repeat;
+}
+	
+
+.buttonCT{
+	width:120px;
+	height:60px;
+	background-color:#808080;
+	color:#333333;
+	
+	margin-top:0px;
+	text-align:center;
+	font-size:18px;
+	line-height:60px;
+	cursor:pointer;
+	
+}
+
+.containerBottomHeading{
+	color:#FFF;
+	float:left;
+	margin-left:20px;
+	font-size:18px;
+	line-height:60px;
+	
+}
+
+  div.vertical-line{
+      width: 1px; /* Line width */
+      background-color: #999999; /* Line color */
+      height: 60px; /* Override in-line if you want specific height. */
+	  margin-top:5px;
+	  margin-left:20px;
+      float: left; /* Causes the line to float to left of content. 
+	  
+        You can instead use position:absolute or display:inline-block
+        if this fits better with your design */
+    }
+
+.timeC{
+ font-size:24px;
+ color:#FFF;
+ float:left;
+ margin-left:10px;
+ line-height:60px;
+ font-family:EYInterstate;
+ /*font-weight:bold*/
+}
+
+
+
+
+
+#LogoRotator { z-index: 99; width: 40px; height: 40px; border-radius: 50%; border: 1px solid transparent; border-top-color: #F04C3E; animation: spin 2s linear infinite;  }
+	#LogoRotator:before { content: ""; position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; border-radius: 50%; border: 1px solid transparent; border-top-color: #FFE600; }
+	#LogoRotator:after { content: ""; position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; border-radius: 50%; border: 1px solid transparent; border-top-color: #F04C3E; }
+	@keyframes spin { 100% { transform: rotate(360deg); } }
+	
+
+	#LogoRotator.varySpeed:before { animation: spin 3s linear infinite; }
+	#LogoRotator.varySpeed:after { animation: spin 1.5s linear infinite; }
+   
+   
+  
+
+/*Color issue fix*/
+
+#resetB:hover
+{
+	background-color: #424242 !important;
+	color:#fff !important;
+}
+
+
+#submitB:hover
+{
+	background-color: #424242 !important;
+	color:#fff !important;
+}
+
+
+#nextB:hover
+{
+	background-color: #424242 !important; 
+	color:#fff !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
